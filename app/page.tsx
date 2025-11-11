@@ -527,7 +527,7 @@ export default function SecuraMemLanding() {
               Acquire SecuraMem: <span className="text-emerald-400 font-bold">Immediate</span> (93% complete, integration-ready)
             </p>
             <p className="text-slate-400">
-              By the time competitors build equivalent infrastructure, you've captured 2+ years of market share
+              By the time competitors build equivalent infrastructure, you&apos;ve captured 2+ years of market share
               in the sovereign AI segment.
             </p>
           </motion.div>
