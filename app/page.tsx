@@ -6,7 +6,8 @@ import { useInView } from 'react-intersection-observer';
 import {
   Shield, Lock, CheckCircle, ArrowRight, Download, Calendar,
   Code, Globe, Zap, FileText, AlertTriangle, Target, Sparkles,
-  TrendingUp, Award, Rocket
+  TrendingUp, Award, Rocket, Layers, Terminal, Database, Activity,
+  Eye, Scale, Building2, Gavel, Users, Brain
 } from 'lucide-react';
 
 // Animation variants
@@ -409,6 +410,390 @@ export default function SecuraMemLanding() {
                   {metric.value}
                 </motion.div>
                 <div className="text-slate-400">{metric.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatedSection>
+
+        {/* Technical Architecture Deep Dive - 3 Layer System */}
+        <AnimatedSection className="max-w-7xl mx-auto px-6 py-24 bg-gradient-to-b from-slate-950 to-slate-900/50">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-16"
+          >
+            <motion.div
+              variants={fadeInUp}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm font-semibold mb-6"
+            >
+              <Layers className="w-4 h-4" />
+              Modular 3-Layer Architecture
+            </motion.div>
+            <motion.h2 variants={fadeInUp} className="text-5xl font-bold mb-6">
+              Technical Architecture Deep Dive
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-xl text-slate-400 max-w-4xl mx-auto">
+              Air-gapped, zero-egress system with cryptographic chain-of-custody and court-admissible audit trails
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-3 gap-8 mb-16"
+          >
+            {[
+              {
+                layer: "L1",
+                icon: Scale,
+                title: "Compliance & Legal Node",
+                color: "from-blue-600 to-cyan-600",
+                bgGradient: "from-blue-950/30 to-cyan-950/10",
+                borderColor: "border-blue-800/50",
+                features: [
+                  "RFC 3161 timestamping",
+                  "ED25519 + SHA-256 cryptographic proofs",
+                  "Court-admissible audit receipts",
+                  "Immutable chain-of-custody"
+                ],
+                description: "Every AI decision tracked with cryptographic evidence"
+              },
+              {
+                layer: "L2",
+                icon: Database,
+                title: "Semantic & Persistent Memory",
+                color: "from-emerald-600 to-green-600",
+                bgGradient: "from-emerald-950/30 to-green-950/10",
+                borderColor: "border-emerald-800/50",
+                features: [
+                  "384-dimensional vector engine",
+                  "Local-only SQLite + FAISS storage",
+                  "Zero external dependencies",
+                  "Semantic context preservation"
+                ],
+                description: "Air-gapped semantic memory with zero cloud leakage"
+              },
+              {
+                layer: "L3",
+                icon: Activity,
+                title: "Enterprise Monitoring Node",
+                color: "from-purple-600 to-pink-600",
+                bgGradient: "from-purple-950/30 to-pink-950/10",
+                borderColor: "border-purple-800/50",
+                features: [
+                  "Prometheus metrics (127.0.0.1:8080)",
+                  "REST API for health checks",
+                  "Real-time compliance dashboards",
+                  "Automated policy enforcement"
+                ],
+                description: "Enterprise-grade observability without external telemetry"
+              }
+            ].map((layer, idx) => (
+              <motion.div
+                key={idx}
+                variants={scaleIn}
+                whileHover={{
+                  y: -15,
+                  scale: 1.03,
+                  boxShadow: "0 25px 50px rgba(59, 130, 246, 0.3)"
+                }}
+                className={`glass-effect border-2 ${layer.borderColor} rounded-2xl p-8 bg-gradient-to-br ${layer.bgGradient} group cursor-pointer relative overflow-hidden`}
+              >
+                {/* Animated layer badge */}
+                <motion.div
+                  className={`absolute top-4 right-4 w-12 h-12 rounded-full bg-gradient-to-br ${layer.color} flex items-center justify-center text-white font-bold text-lg`}
+                  whileHover={{ rotate: 360, scale: 1.2 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  {layer.layer}
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: 15 }}
+                  transition={{ duration: 0.4 }}
+                  className="mb-6"
+                >
+                  <layer.icon className="w-16 h-16 text-blue-400 group-hover:text-blue-300 transition-colors" />
+                </motion.div>
+
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+                  {layer.title}
+                </h3>
+                <p className="text-slate-400 mb-6 leading-relaxed text-sm">
+                  {layer.description}
+                </p>
+
+                <div className="space-y-2">
+                  {layer.features.map((feature, featureIdx) => (
+                    <motion.div
+                      key={featureIdx}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: featureIdx * 0.1 }}
+                      className="flex items-start gap-2 text-sm text-slate-300"
+                    >
+                      <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                      <span>{feature}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* CLI Commands Showcase */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-effect border border-slate-800/50 rounded-2xl p-10 mb-16"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <motion.div
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <Terminal className="w-10 h-10 text-green-400" />
+              </motion.div>
+              <div>
+                <h3 className="text-3xl font-bold">Developer-First CLI</h3>
+                <p className="text-slate-400">Production-ready commands included in acquisition</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  command: "$ smem init",
+                  description: "Initialize air-gapped workspace with cryptographic identity",
+                  output: "✓ ED25519 keypair generated\n✓ Policy enforced: NO_TELEMETRY\n✓ Memory database ready"
+                },
+                {
+                  command: "$ smem prove-offline",
+                  description: "Generate court-admissible cryptographic proof of offline execution",
+                  output: "✓ RFC 3161 timestamp applied\n✓ Chain-of-custody sealed\n✓ Receipt: a3f8c2d1.json"
+                },
+                {
+                  command: "$ smem enterprise-health",
+                  description: "Real-time compliance posture monitoring",
+                  output: "✓ L1: Audit trail integrity OK\n✓ L2: Memory isolation verified\n✓ L3: API responding 127.0.0.1:8080"
+                },
+                {
+                  command: "$ smem certify-node",
+                  description: "Generate compliance certification reports (GDPR, SOX, ISO)",
+                  output: "✓ GDPR Article 22 compliance\n✓ SOX 404 audit trail verified\n✓ Certificate exported"
+                }
+              ].map((cmd, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: idx * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-slate-900/80 border border-slate-700/50 rounded-xl p-6 font-mono text-sm"
+                >
+                  <motion.div
+                    className="text-green-400 font-bold mb-2"
+                    whileHover={{ x: 5 }}
+                  >
+                    {cmd.command}
+                  </motion.div>
+                  <p className="text-slate-500 text-xs mb-4 font-sans">{cmd.description}</p>
+                  <div className="text-slate-400 text-xs whitespace-pre-line leading-relaxed border-t border-slate-800 pt-3">
+                    {cmd.output}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Compliance Certifications */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <motion.h3
+              variants={fadeInUp}
+              className="text-3xl font-bold mb-8 flex items-center justify-center gap-3"
+            >
+              <Shield className="w-8 h-8 text-blue-400" />
+              Compliance & Regulatory Alignment
+            </motion.h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                { name: "GDPR Art. 22 & 25", color: "bg-blue-950/50 border-blue-800/50 text-blue-400" },
+                { name: "EU AI Act Ready", color: "bg-purple-950/50 border-purple-800/50 text-purple-400" },
+                { name: "NIST RMF Level 4", color: "bg-emerald-950/50 border-emerald-800/50 text-emerald-400" },
+                { name: "SOX 404", color: "bg-amber-950/50 border-amber-800/50 text-amber-400" },
+                { name: "ISO 27001", color: "bg-cyan-950/50 border-cyan-800/50 text-cyan-400" },
+                { name: "PIPEDA", color: "bg-pink-950/50 border-pink-800/50 text-pink-400" },
+                { name: "HIPAA Ready", color: "bg-green-950/50 border-green-800/50 text-green-400" },
+                { name: "FedRAMP Track", color: "bg-red-950/50 border-red-800/50 text-red-400" }
+              ].map((cert, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: idx * 0.05 }}
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: "0 10px 30px rgba(59, 130, 246, 0.3)"
+                  }}
+                  className={`px-6 py-3 ${cert.color} border rounded-xl font-semibold text-sm backdrop-blur-sm`}
+                >
+                  {cert.name}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </AnimatedSection>
+
+        {/* Why This Matters - Stakeholder Value */}
+        <AnimatedSection className="max-w-7xl mx-auto px-6 py-24 border-y border-slate-800/50">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-16"
+          >
+            <motion.h2 variants={fadeInUp} className="text-5xl font-bold mb-6">
+              Why This Matters
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-xl text-slate-400 max-w-4xl mx-auto">
+              Transformative value across every stakeholder in the AI ecosystem
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {[
+              {
+                icon: Code,
+                title: "For Developers",
+                color: "text-blue-400",
+                gradient: "from-blue-950/30 to-blue-900/10",
+                border: "border-blue-800/50",
+                benefits: [
+                  "Build AI features without cloud vendor lock-in",
+                  "Cryptographic proof for every AI decision",
+                  "YAML-based workflow definitions",
+                  "Full source code transparency"
+                ]
+              },
+              {
+                icon: Building2,
+                title: "For Enterprises",
+                color: "text-emerald-400",
+                gradient: "from-emerald-950/30 to-emerald-900/10",
+                border: "border-emerald-800/50",
+                benefits: [
+                  "Deploy AI in classified/air-gapped environments",
+                  "Zero data exfiltration risk",
+                  "Human-in-the-loop oversight at every step",
+                  "Instant compliance for regulated industries"
+                ]
+              },
+              {
+                icon: Globe,
+                title: "For Governments",
+                color: "text-purple-400",
+                gradient: "from-purple-950/30 to-purple-900/10",
+                border: "border-purple-800/50",
+                benefits: [
+                  "Sovereign AI without foreign cloud dependencies",
+                  "National security-grade isolation",
+                  "Democratic oversight of AI decisions",
+                  "EU AI Act and GDPR compliant"
+                ]
+              },
+              {
+                icon: Gavel,
+                title: "For Law Firms",
+                color: "text-amber-400",
+                gradient: "from-amber-950/30 to-amber-900/10",
+                border: "border-amber-800/50",
+                benefits: [
+                  "Court-admissible cryptographic evidence",
+                  "Attorney-client privilege preservation",
+                  "Chain-of-custody for document handling",
+                  "Tamper-evident audit trails"
+                ]
+              },
+              {
+                icon: Eye,
+                title: "For Auditors",
+                color: "text-cyan-400",
+                gradient: "from-cyan-950/30 to-cyan-900/10",
+                border: "border-cyan-800/50",
+                benefits: [
+                  "Deterministic replay of AI workflows",
+                  "Immutable audit trail (cannot be deleted)",
+                  "SOX 404 and ISO 27001 ready",
+                  "Automated compliance reporting"
+                ]
+              },
+              {
+                icon: Brain,
+                title: "For AI Safety",
+                color: "text-pink-400",
+                gradient: "from-pink-950/30 to-pink-900/10",
+                border: "border-pink-800/50",
+                benefits: [
+                  "Glass-box AI with full transparency",
+                  "Policy enforcement at infrastructure layer",
+                  "Zero-trust security model",
+                  "Verifiable alignment with human oversight"
+                ]
+              }
+            ].map((stakeholder, idx) => (
+              <motion.div
+                key={idx}
+                variants={scaleIn}
+                whileHover={{
+                  y: -10,
+                  scale: 1.03,
+                  boxShadow: "0 20px 40px rgba(59, 130, 246, 0.2)"
+                }}
+                className={`glass-effect border-2 ${stakeholder.border} rounded-2xl p-8 bg-gradient-to-br ${stakeholder.gradient} group`}
+              >
+                <motion.div
+                  whileHover={{ rotate: 360, scale: 1.2 }}
+                  transition={{ duration: 0.6 }}
+                  className="mb-6"
+                >
+                  <stakeholder.icon className={`w-12 h-12 ${stakeholder.color}`} />
+                </motion.div>
+
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">
+                  {stakeholder.title}
+                </h3>
+
+                <div className="space-y-3">
+                  {stakeholder.benefits.map((benefit, benefitIdx) => (
+                    <motion.div
+                      key={benefitIdx}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: benefitIdx * 0.05 }}
+                      className="flex items-start gap-2 text-sm text-slate-300"
+                    >
+                      <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                      <span>{benefit}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </motion.div>
