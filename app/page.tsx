@@ -106,7 +106,7 @@ export default function SecuraMemLanding() {
   const acquisitionMetrics = [
     { label: "Operational Completion", value: "93%", icon: CheckCircle, color: "text-emerald-400" },
     { label: "Compliance Certifications", value: "4+", icon: Shield, color: "text-blue-400" },
-    { label: "Signature Workflows", value: "5", icon: FileText, color: "text-purple-400" },
+    { label: "Signature Workflows", value: "3", icon: FileText, color: "text-purple-400" },
     { label: "Development Timeline Saved", value: "18-24mo", icon: Zap, color: "text-amber-400" }
   ];
 
@@ -496,7 +496,7 @@ export default function SecuraMemLanding() {
                   "All major compliance certifications complete (93%)",
                   "Immediate deployment capability across regulated industries",
                   "Cryptographic audit infrastructure (court-admissible)",
-                  "5 productized workflow templates included"
+                  "3 productized workflow templates included"
                 ].map((item, idx) => (
                   <motion.li
                     key={idx}
