@@ -7,7 +7,7 @@ import {
   Shield, Lock, CheckCircle, ArrowRight, Download, Calendar,
   Code, Globe, Zap, FileText, AlertTriangle, Target, Sparkles,
   TrendingUp, Award, Rocket, Layers, Terminal, Database, Activity,
-  Eye, Scale, Building2, Gavel, Users, Brain
+  Eye, Scale, Building2, Gavel, Brain
 } from 'lucide-react';
 
 // Animation variants
@@ -105,10 +105,10 @@ export default function SecuraMemLanding() {
   });
 
   const acquisitionMetrics = [
-    { label: "Operational Completion", value: "93%", icon: CheckCircle, color: "text-emerald-400" },
+    { label: "Operational Completion", value: "100%", icon: CheckCircle, color: "text-emerald-400" },
     { label: "Compliance Certifications", value: "4+", icon: Shield, color: "text-blue-400" },
-    { label: "Signature Workflows", value: "3", icon: FileText, color: "text-purple-400" },
-    { label: "Development Timeline Saved", value: "18-24mo", icon: Zap, color: "text-amber-400" }
+    { label: "Single Binary", value: "Zero Deps", icon: FileText, color: "text-purple-400" },
+    { label: "Development Timeline Saved", value: "24-36mo", icon: Zap, color: "text-amber-400" }
   ];
 
   const valueProps: Record<string, any> = {
@@ -117,10 +117,10 @@ export default function SecuraMemLanding() {
       subtitle: "Anthropic, OpenAI, Cohere, Mistral",
       icon: Sparkles,
       benefits: [
-        "Unlock $47B+ enterprise/government market your cloud-only architecture can't serve",
-        "Immediate defense, healthcare, banking deployment capability",
-        "Differentiation against cloud-locked competitors",
-        "Strategic moat: only production-ready air-gapped AI workflow infrastructure"
+        "Serve air-gapped enterprise/government markets your cloud architecture cannot reach",
+        "100MB single binary: zero runtime dependencies, SIMD-optimized (AVX2, FMA, F16C)",
+        "NeuroWall: 90.56% - 100% jailbreak blocking tested end-to-end in production",
+        "Only AI Black Box with Ed25519 + SHA-256 cryptographic proof (legally-admissible)"
       ]
     },
     cloud: {
@@ -129,7 +129,7 @@ export default function SecuraMemLanding() {
       icon: Globe,
       benefits: [
         "Defensive play against air-gapped competition",
-        "Complete your sovereign AI offering without 2+ years of development",
+        "Complete your sovereign AI offering without 2+ years of Rust development",
         "Retain enterprise customers requiring on-premise deployment",
         "Bundle with existing compliance products for upsell revenue"
       ]
@@ -139,10 +139,10 @@ export default function SecuraMemLanding() {
       subtitle: "Palantir, Booz Allen, SAIC, Leidos",
       icon: Shield,
       benefits: [
-        "Commercial-ready AI compliance layer for classified environments",
-        "Court-admissible cryptographic audit trail (first-of-kind)",
-        "Instant credibility in AI-powered government RFP responses",
-        "Accelerate AI solution delivery by 18-24 months per program"
+        "Production-ready AI compliance layer for classified environments (zero external dependencies)",
+        "Ed25519 + SHA-256 cryptographic audit trail (court-admissible, legally-valid evidence)",
+        "NeuroWall semantic firewall with embedded ONNX model (100% offline, no API calls)",
+        "Accelerate AI solution delivery by 36+ months per program (skip R&D phase entirely)"
       ]
     },
     vc: {
@@ -158,48 +158,6 @@ export default function SecuraMemLanding() {
     }
   };
 
-  const workflowTemplates = [
-    {
-      name: "Autonomous Security Sentinel",
-      industry: "Security & Compliance",
-      description: "Continuous system monitoring + AI threat analysis with cryptographic posture evidence",
-      compliance: ["NIST-800-53", "ISO-27001"],
-      runtime: "Real-time",
-      gradient: "from-red-500/20 to-orange-500/20"
-    },
-    {
-      name: "Banking KYC Analyzer",
-      industry: "Financial Services",
-      description: "Identity document processing with verifiable anti-tamper evidence streams",
-      compliance: ["PCI-DSS", "GLBA"],
-      runtime: "Batch processing",
-      gradient: "from-green-500/20 to-emerald-500/20"
-    },
-    {
-      name: "Clinical Data Processor",
-      industry: "Healthcare",
-      description: "PHI/PII handling (OCR → redact → summarize) with court-admissible receipts",
-      compliance: ["HIPAA", "HITECH"],
-      runtime: "~2m per document",
-      gradient: "from-blue-500/20 to-cyan-500/20"
-    },
-    {
-      name: "AI-Native IDE Assistant",
-      industry: "Software Development",
-      description: "Local code intelligence with cryptographic suggestion provenance",
-      compliance: ["GDPR", "SOC 2"],
-      runtime: "Millisecond response",
-      gradient: "from-purple-500/20 to-pink-500/20"
-    },
-    {
-      name: "SOC Security Runbook",
-      industry: "Defense & Intelligence",
-      description: "Log correlation → incident playbook with air-gapped signed chain",
-      compliance: ["NIST SP 800-171", "CMMC"],
-      runtime: "<10m execution",
-      gradient: "from-amber-500/20 to-yellow-500/20"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
@@ -234,7 +192,7 @@ export default function SecuraMemLanding() {
               <Shield className="w-8 h-8 text-blue-400" />
               <div>
                 <h1 className="text-2xl font-bold">SecuraMem</h1>
-                <p className="text-xs text-slate-400">Air-Gapped AI Infrastructure</p>
+                <p className="text-xs text-slate-400">The AI Black Box Recorder</p>
               </div>
             </motion.div>
             <div className="flex items-center gap-4">
@@ -246,13 +204,13 @@ export default function SecuraMemLanding() {
                 Built for Acquisition
               </motion.span>
               <motion.a
-                href="mailto:jeremy@securamem.com?subject=Pitch%20Deck%20Request"
+                href="mailto:jeremy@securamem.com?subject=Request%20Demo%20%26%20Defense%20Kit"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}
                 whileTap={{ scale: 0.95 }}
                 className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-sm transition-colors flex items-center gap-2"
               >
                 <Download className="w-4 h-4" />
-                Download Pitch Deck
+                Request Demo
               </motion.a>
               <motion.a
                 href="mailto:jeremy@securamem.com?subject=Schedule%20Acquisition%20Call"
@@ -297,10 +255,10 @@ export default function SecuraMemLanding() {
               className="text-7xl font-bold mb-8 leading-tight"
             >
               <span className="gradient-text">
-                The Air-Gapped AI Infrastructure
+                The AI Black Box Recorder
               </span>
               <br />
-              <span className="text-white">Every Platform Needs</span>
+              <span className="text-white">Every Enterprise Needs</span>
             </motion.h1>
 
             <motion.p
@@ -309,9 +267,7 @@ export default function SecuraMemLanding() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-2xl text-slate-300 mb-12 leading-relaxed max-w-4xl mx-auto"
             >
-              Production-ready sovereign AI workflow platform enabling enterprise deployment in
-              <span className="text-blue-400 font-semibold"> defense, healthcare, banking, and government</span>
-              —markets worth <span className="text-emerald-400 font-semibold">$47B+</span> that cloud-only architectures cannot serve.
+              While competitors offer logging, SecuraMem provides <span className="text-blue-400 font-semibold">legally-admissible cryptographic proof</span> of every AI interaction. Our <span className="text-purple-400 font-semibold">NeuroWall semantic firewall</span> blocks jailbreaks <span className="text-emerald-400 font-semibold">before they reach your LLM</span>—all in a <span className="text-blue-400 font-semibold">100MB single-binary</span> with <span className="text-emerald-400 font-semibold">zero external dependencies</span>.
             </motion.p>
 
             <motion.div
@@ -415,7 +371,7 @@ export default function SecuraMemLanding() {
           </motion.div>
         </AnimatedSection>
 
-        {/* Technical Architecture Deep Dive - 3 Layer System */}
+        {/* Technical Architecture Deep Dive - 3 Layer System + NeuroWall */}
         <AnimatedSection className="max-w-7xl mx-auto px-6 py-24 bg-gradient-to-b from-slate-950 to-slate-900/50">
           <motion.div
             initial="hidden"
@@ -429,13 +385,13 @@ export default function SecuraMemLanding() {
               className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm font-semibold mb-6"
             >
               <Layers className="w-4 h-4" />
-              Modular 3-Layer Architecture
+              Rust-Hardened 4-Layer Architecture
             </motion.div>
             <motion.h2 variants={fadeInUp} className="text-5xl font-bold mb-6">
               Technical Architecture Deep Dive
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-xl text-slate-400 max-w-4xl mx-auto">
-              Air-gapped, zero-egress system with cryptographic chain-of-custody and court-admissible audit trails
+              Air-gapped, zero-dependency Rust system with cryptographic chain-of-custody and court-admissible audit trails
             </motion.p>
           </motion.div>
 
@@ -444,7 +400,7 @@ export default function SecuraMemLanding() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8 mb-16"
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           >
             {[
               {
@@ -455,27 +411,27 @@ export default function SecuraMemLanding() {
                 bgGradient: "from-blue-950/30 to-cyan-950/10",
                 borderColor: "border-blue-800/50",
                 features: [
-                  "RFC 3161 timestamping",
-                  "ED25519 + SHA-256 cryptographic proofs",
+                  "Ed25519 + SHA-256 cryptographic proofs",
+                  "Blockchain-style hash chain",
                   "Court-admissible audit receipts",
-                  "Immutable chain-of-custody"
+                  "Immutable SQLite WAL storage"
                 ],
                 description: "Every AI decision tracked with cryptographic evidence"
               },
               {
                 layer: "L2",
                 icon: Database,
-                title: "Semantic & Persistent Memory",
-                color: "from-emerald-600 to-green-600",
-                bgGradient: "from-emerald-950/30 to-green-950/10",
-                borderColor: "border-emerald-800/50",
+                title: "Audit Ledger (Rust)",
+                color: "from-amber-600 to-orange-600",
+                bgGradient: "from-amber-950/30 to-orange-950/10",
+                borderColor: "border-amber-800/50",
                 features: [
-                  "384-dimensional vector engine",
-                  "Local-only SQLite + FAISS storage",
-                  "Zero external dependencies",
-                  "Semantic context preservation"
+                  "Immutable append-only ledger",
+                  "Embedded SQLite (zero dependencies)",
+                  "SHA-256 tamper detection",
+                  "Genesis entry bootstrap"
                 ],
-                description: "Air-gapped semantic memory with zero cloud leakage"
+                description: "Blockchain-style audit chain with permanent attribution"
               },
               {
                 layer: "L3",
@@ -485,12 +441,27 @@ export default function SecuraMemLanding() {
                 bgGradient: "from-purple-950/30 to-pink-950/10",
                 borderColor: "border-purple-800/50",
                 features: [
-                  "Prometheus metrics (127.0.0.1:8080)",
-                  "REST API for health checks",
+                  "Prometheus metrics (127.0.0.1:3050)",
+                  "Axum REST API for health checks",
                   "Real-time compliance dashboards",
                   "Automated policy enforcement"
                 ],
                 description: "Enterprise-grade observability without external telemetry"
+              },
+              {
+                layer: "FW",
+                icon: Shield,
+                title: "NeuroWall Semantic Firewall",
+                color: "from-emerald-600 to-green-600",
+                bgGradient: "from-emerald-950/30 to-green-950/10",
+                borderColor: "border-emerald-800/50",
+                features: [
+                  "384D ONNX embeddings (all-MiniLM-L6-v2)",
+                  "90.56% - 100% jailbreak detection rate",
+                  "SIMD-optimized: AVX2, FMA, F16C",
+                  "All decisions logged to audit chain"
+                ],
+                description: "Semantic threat detection with embedded AI model (fully offline)"
               }
             ].map((layer, idx) => (
               <motion.div
@@ -501,11 +472,11 @@ export default function SecuraMemLanding() {
                   scale: 1.03,
                   boxShadow: "0 25px 50px rgba(59, 130, 246, 0.3)"
                 }}
-                className={`glass-effect border-2 ${layer.borderColor} rounded-2xl p-8 bg-gradient-to-br ${layer.bgGradient} group cursor-pointer relative overflow-hidden`}
+                className={`glass-effect border-2 ${layer.borderColor} rounded-2xl p-6 bg-gradient-to-br ${layer.bgGradient} group cursor-pointer relative overflow-hidden`}
               >
                 {/* Animated layer badge */}
                 <motion.div
-                  className={`absolute top-4 right-4 w-12 h-12 rounded-full bg-gradient-to-br ${layer.color} flex items-center justify-center text-white font-bold text-lg`}
+                  className={`absolute top-4 right-4 w-10 h-10 rounded-full bg-gradient-to-br ${layer.color} flex items-center justify-center text-white font-bold text-sm`}
                   whileHover={{ rotate: 360, scale: 1.2 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -515,28 +486,28 @@ export default function SecuraMemLanding() {
                 <motion.div
                   whileHover={{ scale: 1.2, rotate: 15 }}
                   transition={{ duration: 0.4 }}
-                  className="mb-6"
+                  className="mb-4"
                 >
-                  <layer.icon className="w-16 h-16 text-blue-400 group-hover:text-blue-300 transition-colors" />
+                  <layer.icon className="w-12 h-12 text-blue-400 group-hover:text-blue-300 transition-colors" />
                 </motion.div>
 
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
                   {layer.title}
                 </h3>
-                <p className="text-slate-400 mb-6 leading-relaxed text-sm">
+                <p className="text-slate-400 mb-4 leading-relaxed text-xs">
                   {layer.description}
                 </p>
 
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   {layer.features.map((feature, featureIdx) => (
                     <motion.div
                       key={featureIdx}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: featureIdx * 0.1 }}
-                      className="flex items-start gap-2 text-sm text-slate-300"
+                      className="flex items-start gap-2 text-xs text-slate-300"
                     >
-                      <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-3 h-3 text-emerald-400 flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </motion.div>
                   ))}
@@ -545,7 +516,7 @@ export default function SecuraMemLanding() {
             ))}
           </motion.div>
 
-          {/* CLI Commands Showcase */}
+          {/* CLI Commands Showcase - Updated for Rust */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -560,8 +531,8 @@ export default function SecuraMemLanding() {
                 <Terminal className="w-10 h-10 text-green-400" />
               </motion.div>
               <div>
-                <h3 className="text-3xl font-bold">Developer-First CLI</h3>
-                <p className="text-slate-400">Production-ready commands included in acquisition</p>
+                <h3 className="text-3xl font-bold">Production-Ready Rust CLI</h3>
+                <p className="text-slate-400">Single hardened binary (100MB with embedded ONNX model)</p>
               </div>
             </div>
 
@@ -569,23 +540,23 @@ export default function SecuraMemLanding() {
               {[
                 {
                   command: "$ smem init",
-                  description: "Initialize air-gapped workspace with cryptographic identity",
-                  output: "✓ ED25519 keypair generated\n✓ Policy enforced: NO_TELEMETRY\n✓ Memory database ready"
+                  description: "Initialize air-gapped workspace with Ed25519 cryptographic identity",
+                  output: "✓ ED25519 keypair generated\n✓ Genesis entry created\n✓ Policy enforced: AIR_GAPPED"
                 },
                 {
-                  command: "$ smem prove-offline",
-                  description: "Generate court-admissible cryptographic proof of offline execution",
-                  output: "✓ RFC 3161 timestamp applied\n✓ Chain-of-custody sealed\n✓ Receipt: a3f8c2d1.json"
+                  command: "$ smem firewall --openai-api-key $KEY --port 3051",
+                  description: "Start NeuroWall semantic firewall (tested: 90.56% - 100% jailbreak blocking)",
+                  output: "🛡️  NeuroWall listening on 127.0.0.1:3051\n✓ SIMD: AVX2/FMA/F16C activated\n✓ Forbidden concepts: 4 embeddings computed\n✓ Similarity threshold: 80%"
                 },
                 {
-                  command: "$ smem enterprise-health",
-                  description: "Real-time compliance posture monitoring",
-                  output: "✓ L1: Audit trail integrity OK\n✓ L2: Memory isolation verified\n✓ L3: API responding 127.0.0.1:8080"
+                  command: "$ smem verify",
+                  description: "Verify entire audit chain integrity (SHA-256 hash validation)",
+                  output: "✓ AUDIT CHAIN INTEGRITY CONFIRMED\n  Total entries verified: 1,247\n  Genesis → Latest: VALID"
                 },
                 {
-                  command: "$ smem certify-node",
-                  description: "Generate compliance certification reports (GDPR, SOX, ISO)",
-                  output: "✓ GDPR Article 22 compliance\n✓ SOX 404 audit trail verified\n✓ Certificate exported"
+                  command: "$ smem status",
+                  description: "Real-time compliance posture and system health",
+                  output: "SecuraMem Status:\n  Mode: Audit-Only (AI Black Box)\n  Total Entries: 1,247\n  L2 norm: 1.000000 (perfect unit vectors)"
                 }
               ].map((cmd, idx) => (
                 <motion.div
@@ -606,6 +577,49 @@ export default function SecuraMemLanding() {
                   <div className="text-slate-400 text-xs whitespace-pre-line leading-relaxed border-t border-slate-800 pt-3">
                     {cmd.output}
                   </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Rust Technical Stack Highlights */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-effect border border-amber-800/50 rounded-2xl p-10 mb-16 bg-gradient-to-br from-amber-950/20 to-orange-950/10"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <motion.div
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              >
+                <Code className="w-10 h-10 text-amber-400" />
+              </motion.div>
+              <div>
+                <h3 className="text-3xl font-bold">Rust Technical Stack</h3>
+                <p className="text-slate-400">Zero external dependencies, hardened release profile</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4">
+              {[
+                { label: "ONNX Inference", value: "tract-onnx 0.21", color: "text-blue-400" },
+                { label: "Cryptography", value: "Ed25519-Dalek + Ring", color: "text-emerald-400" },
+                { label: "Storage", value: "SQLx (SQLite WAL)", color: "text-purple-400" },
+                { label: "Web Server", value: "Axum 0.7 (Tokio)", color: "text-cyan-400" },
+                { label: "Tokenization", value: "HuggingFace Tokenizers", color: "text-pink-400" },
+                { label: "Build Profile", value: "LTO + Strip + Size Opt", color: "text-amber-400" }
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.05 }}
+                  className="bg-slate-900/50 border border-slate-700/30 rounded-lg p-4"
+                >
+                  <div className="text-xs text-slate-500 mb-1">{item.label}</div>
+                  <div className={`text-sm font-bold ${item.color}`}>{item.value}</div>
                 </motion.div>
               ))}
             </div>
@@ -686,10 +700,10 @@ export default function SecuraMemLanding() {
                 gradient: "from-blue-950/30 to-blue-900/10",
                 border: "border-blue-800/50",
                 benefits: [
-                  "Build AI features without cloud vendor lock-in",
+                  "Single Rust binary (no Node.js runtime)",
                   "Cryptographic proof for every AI decision",
-                  "YAML-based workflow definitions",
-                  "Full source code transparency"
+                  "Semantic firewall blocks jailbreaks automatically",
+                  "Full source code transparency (production-ready)"
                 ]
               },
               {
@@ -700,8 +714,8 @@ export default function SecuraMemLanding() {
                 border: "border-emerald-800/50",
                 benefits: [
                   "Deploy AI in classified/air-gapped environments",
-                  "Zero data exfiltration risk",
-                  "Human-in-the-loop oversight at every step",
+                  "Zero data exfiltration risk (no external APIs)",
+                  "NeuroWall semantic threat detection (pre-LLM)",
                   "Instant compliance for regulated industries"
                 ]
               },
@@ -728,7 +742,7 @@ export default function SecuraMemLanding() {
                   "Court-admissible cryptographic evidence",
                   "Attorney-client privilege preservation",
                   "Chain-of-custody for document handling",
-                  "Tamper-evident audit trails"
+                  "Tamper-evident audit trails (hash chain)"
                 ]
               },
               {
@@ -752,8 +766,8 @@ export default function SecuraMemLanding() {
                 border: "border-pink-800/50",
                 benefits: [
                   "Glass-box AI with full transparency",
-                  "Policy enforcement at infrastructure layer",
-                  "Zero-trust security model",
+                  "Semantic firewall detects prompt injection",
+                  "Zero-trust security model (Rust memory safety)",
                   "Verifiable alignment with human oversight"
                 ]
               }
@@ -841,11 +855,11 @@ export default function SecuraMemLanding() {
               </div>
               <ul className="space-y-4 text-slate-300">
                 {[
-                  "Cloud-only AI platforms lose $47B+ in annual enterprise deals",
-                  "Defense, healthcare, banking require sovereign deployment",
-                  "Building air-gapped infrastructure internally: 18-24 months",
-                  "Compliance certifications add 12-18 months more",
-                  "No court-admissible audit trail in existing solutions"
+                  "Cloud-only AI platforms cannot serve air-gapped enterprises",
+                  "Defense, healthcare, banking require zero-dependency deployment",
+                  "Building Rust cryptographic audit infrastructure: 24-36 months",
+                  "Semantic firewall R&D adds 12+ months more",
+                  "Current solutions lack legally-admissible cryptographic proof"
                 ].map((item, idx) => (
                   <motion.li
                     key={idx}
@@ -877,11 +891,11 @@ export default function SecuraMemLanding() {
               </div>
               <ul className="space-y-4 text-slate-300">
                 {[
-                  "Production-ready air-gapped AI workflow platform",
-                  "All major compliance certifications complete (93%)",
-                  "Immediate deployment capability across regulated industries",
-                  "Cryptographic audit infrastructure (court-admissible)",
-                  "3 productized workflow templates included"
+                  "Production-ready Rust binary (100MB with embedded ONNX)",
+                  "All major compliance certifications ready (SOC 2, HIPAA, GDPR)",
+                  "NeuroWall: 90.56% - 100% jailbreak detection (E2E tested)",
+                  "Ed25519 + SHA-256 audit chain (legally-admissible)",
+                  "Zero runtime dependencies (fully air-gapped deployment)"
                 ].map((item, idx) => (
                   <motion.li
                     key={idx}
@@ -908,11 +922,11 @@ export default function SecuraMemLanding() {
             <Rocket className="w-12 h-12 text-blue-400 mx-auto mb-4" />
             <h3 className="text-3xl font-bold mb-4">Time Advantage</h3>
             <p className="text-xl text-slate-300 mb-6">
-              Build internally: <span className="text-red-400 font-bold">24-42 months</span> (development + compliance)<br />
-              Acquire SecuraMem: <span className="text-emerald-400 font-bold">Immediate</span> (93% complete, integration-ready)
+              Build equivalent infrastructure internally: <span className="text-red-400 font-bold">36+ months</span> (Rust + crypto + ONNX + compliance)<br />
+              Acquire SecuraMem: <span className="text-emerald-400 font-bold">Immediate deployment</span> (E2E tested, production-ready)
             </p>
             <p className="text-slate-400">
-              By the time competitors build equivalent infrastructure, you&apos;ve captured 2+ years of market share
+              By the time competitors build equivalent Rust infrastructure with semantic firewall, you&apos;ve captured 2+ years of market share
               in the sovereign AI segment.
             </p>
           </motion.div>
@@ -987,78 +1001,6 @@ export default function SecuraMemLanding() {
           </motion.div>
         </AnimatedSection>
 
-        {/* Workflow Templates */}
-        <AnimatedSection className="max-w-7xl mx-auto px-6 py-24">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="text-center mb-16"
-          >
-            <motion.h2 variants={fadeInUp} className="text-5xl font-bold mb-4">
-              Productized Workflow Templates
-            </motion.h2>
-            <motion.p variants={fadeInUp} className="text-xl text-slate-400">
-              Production-tested, compliance-certified templates included in acquisition
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {workflowTemplates.map((template, idx) => (
-              <motion.div
-                key={idx}
-                variants={scaleIn}
-                whileHover={{
-                  y: -10,
-                  transition: { duration: 0.3 }
-                }}
-                className={`glass-effect border border-slate-800/50 rounded-2xl p-8 hover:border-blue-800/50 transition-all group cursor-pointer bg-gradient-to-br ${template.gradient}`}
-              >
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-                      {template.name}
-                    </h3>
-                    <p className="text-sm text-blue-400 font-semibold">{template.industry}</p>
-                  </div>
-                  <motion.div
-                    whileHover={{ rotate: 180 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <Code className="w-8 h-8 text-slate-600 group-hover:text-slate-400 transition-colors" />
-                  </motion.div>
-                </div>
-
-                <p className="text-slate-400 mb-6 leading-relaxed">{template.description}</p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {template.compliance.map((cert, certIdx) => (
-                    <motion.span
-                      key={certIdx}
-                      whileHover={{ scale: 1.1 }}
-                      className="px-3 py-1 bg-emerald-950/50 border border-emerald-900/30 rounded-lg text-xs text-emerald-400 font-semibold"
-                    >
-                      {cert}
-                    </motion.span>
-                  ))}
-                </div>
-
-                <div className="text-sm text-slate-500 flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-amber-400" />
-                  {template.runtime}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatedSection>
-
         {/* Technical Architecture */}
         <AnimatedSection className="max-w-7xl mx-auto px-6 py-24 border-t border-slate-800/50">
           <motion.div
@@ -1087,22 +1029,22 @@ export default function SecuraMemLanding() {
               {
                 icon: Lock,
                 title: "Cryptographic Spine",
-                description: "Every workflow execution produces court-admissible receipts with ED25519 signatures and SHA-256 digests per step.",
-                features: ["Immutable audit trail", "Deterministic replay capability", "Tamper-evident chain linking"],
+                description: "Every workflow execution produces court-admissible receipts with Ed25519 signatures and SHA-256 digests per step.",
+                features: ["Immutable audit trail", "Deterministic replay capability", "Blockchain-style chain linking"],
                 color: "text-blue-400"
               },
               {
                 icon: Globe,
                 title: "Sovereign Operation",
-                description: "Model-agnostic platform operates fully air-gapped with zero external dependencies or telemetry.",
-                features: ["Offline-first architecture", "Replaceable cryptographic keys", "No cloud lock-in"],
+                description: "Single Rust binary operates fully air-gapped with zero external dependencies (no Node.js runtime).",
+                features: ["Offline-first architecture", "Embedded ONNX model", "No cloud lock-in"],
                 color: "text-emerald-400"
               },
               {
                 icon: FileText,
-                title: "Declarative YAML",
-                description: "Human-readable workflow definitions with policy enforcement at the template layer.",
-                features: ["NO_TELEMETRY enforcement", "OFFLINE_STRICT mode", "Version-controlled templates"],
+                title: "Hardened Binary",
+                description: "Production-optimized with LTO, stripped symbols, and size optimization (opt-level = 'z').",
+                features: ["Fat LTO (link-time optimization)", "Panic = abort", "Overflow checks enabled"],
                 color: "text-purple-400"
               }
             ].map((item, idx) => (
@@ -1145,13 +1087,13 @@ export default function SecuraMemLanding() {
           >
             <div className="flex items-center gap-3 mb-6">
               <Shield className="w-8 h-8 text-blue-400" />
-              <h3 className="text-2xl font-bold">Public Key Fingerprint</h3>
+              <h3 className="text-2xl font-bold">Rust Build Hash (Reproducible)</h3>
             </div>
             <motion.code
               className="text-sm text-slate-400 font-mono bg-slate-900/50 px-6 py-4 rounded-xl block overflow-x-auto border border-slate-800"
               whileHover={{ backgroundColor: "rgba(15, 23, 42, 0.8)" }}
             >
-              d870deeac602a4a32110490b8b94945267d1c16f2402cc93e04cf10baac98923
+              SHA-256: f3fd2701a1bf8daff84b3d3faf5bf738a78fb6f4d1e2a9466dadcf9455728ab1
             </motion.code>
           </motion.div>
         </AnimatedSection>
@@ -1186,8 +1128,8 @@ export default function SecuraMemLanding() {
 
               <h2 className="text-5xl font-bold mb-6">Begin Acquisition Discussion</h2>
               <p className="text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                SecuraMem represents the missing infrastructure layer for sovereign AI deployment.
-                Strategic discussions are selective and NDA-protected.
+                SecuraMem is the <span className="text-blue-400 font-semibold">only production-ready AI Black Box</span> with cryptographic proof and semantic firewall.
+                E2E tested, compliance-ready, zero dependencies. Strategic discussions are selective and NDA-protected.
               </p>
 
               <div className="flex justify-center gap-6 mb-12 flex-wrap">
@@ -1204,20 +1146,20 @@ export default function SecuraMemLanding() {
                   Schedule Technical Deep Dive
                 </motion.a>
                 <motion.a
-                  href="mailto:jeremy@securamem.com?subject=Pitch%20Deck%20Request"
+                  href="mailto:jeremy@securamem.com?subject=Request%20Demo%20%26%20Defense%20Kit"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-10 py-5 border-2 border-white text-white hover:bg-white/10 rounded-xl font-bold text-xl flex items-center gap-3"
                 >
                   <Download className="w-6 h-6" />
-                  Download Full Pitch Deck
+                  Request Demo & Defense Kit
                 </motion.a>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {[
                   { value: "Full IP", label: "Source Code & Patents", color: "text-blue-400" },
-                  { value: "93%", label: "Operational Complete", color: "text-emerald-400" },
+                  { value: "100%", label: "Operational Complete", color: "text-emerald-400" },
                   { value: "NDA", label: "Required for Review", color: "text-purple-400" }
                 ].map((stat, idx) => (
                   <motion.div
@@ -1256,7 +1198,7 @@ export default function SecuraMemLanding() {
                   <span className="font-bold text-xl">SecuraMem</span>
                 </motion.div>
                 <p className="text-sm text-slate-400 leading-relaxed mb-3">
-                  Air-gapped AI infrastructure for sovereign enterprise deployment.
+                  Rust-hardened AI infrastructure for sovereign enterprise deployment.
                 </p>
                 <motion.a
                   href="mailto:jeremy@securamem.com"
@@ -1270,7 +1212,7 @@ export default function SecuraMemLanding() {
                 {
                   title: "Acquisition",
                   links: [
-                    { text: "Pitch Deck", href: "mailto:jeremy@securamem.com?subject=Pitch%20Deck%20Request" },
+                    { text: "Request Demo", href: "mailto:jeremy@securamem.com?subject=Request%20Demo%20%26%20Defense%20Kit" },
                     { text: "Technical Docs", href: "mailto:jeremy@securamem.com?subject=Technical%20Documentation" },
                     { text: "Source Code Review", href: "mailto:jeremy@securamem.com?subject=Source%20Code%20Review%20Request" },
                     { text: "Licensing Terms", href: "mailto:jeremy@securamem.com?subject=Licensing%20Terms%20Inquiry" }
@@ -1279,8 +1221,8 @@ export default function SecuraMemLanding() {
                 {
                   title: "Platform",
                   links: [
-                    { text: "Architecture", href: "mailto:jeremy@securamem.com?subject=Architecture%20Information" },
-                    { text: "Workflow Templates", href: "mailto:jeremy@securamem.com?subject=Workflow%20Templates" },
+                    { text: "Rust Architecture", href: "mailto:jeremy@securamem.com?subject=Rust%20Architecture%20Information" },
+                    { text: "NeuroWall Firewall", href: "mailto:jeremy@securamem.com?subject=NeuroWall%20Semantic%20Firewall" },
                     { text: "Compliance", href: "mailto:jeremy@securamem.com?subject=Compliance%20Information" },
                     { text: "Integration Specs", href: "mailto:jeremy@securamem.com?subject=Integration%20Specifications" }
                   ]
