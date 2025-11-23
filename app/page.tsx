@@ -846,7 +846,7 @@ export default function SecuraMemLanding() {
                     >
                       <span className="text-cyan-400 mt-1">▸</span>
                       <div>
-                        <strong className="text-white">{item.label}</strong> {item.desc}
+                        <strong className="text-slate-900">{item.label}</strong> {item.desc}
                       </div>
                     </motion.li>
                   ))}
