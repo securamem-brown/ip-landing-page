@@ -1082,7 +1082,7 @@ export default function SecuraMemLanding() {
               <h3 className="text-4xl font-bold mb-3">{valueProps[activeTab].title}</h3>
               <p className="text-slate-600 text-xl mb-4">{valueProps[activeTab].subtitle}</p>
               <p className="text-2xl font-bold text-cyan-400 italic">
-                "{valueProps[activeTab].tagline}"
+                &ldquo;{valueProps[activeTab].tagline}&rdquo;
               </p>
             </div>
 
