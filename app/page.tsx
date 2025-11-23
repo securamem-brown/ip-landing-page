@@ -146,32 +146,51 @@ export default function SecuraMemLanding() {
                 <p className="text-xs text-trust-navy-300">The AI Flight Recorder™</p>
               </div>
             </motion.div>
-            <div className="flex items-center gap-4">
-              <motion.span
-                className="hidden md:block px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-xs font-semibold text-emerald-300"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                Production-Ready Now
-              </motion.span>
-              <motion.a
-                href="mailto:jeremy@securamem.com?subject=Request%20Demo%20%26%20Defense%20Kit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-trust-blue-500 hover:bg-trust-blue-600 text-white rounded-lg font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm"
-              >
-                <Download className="w-4 h-4" />
-                Request Demo
-              </motion.a>
-              <motion.a
-                href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo%20Call"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 border-2 border-trust-teal-400 text-trust-teal-400 hover:bg-trust-teal-50 rounded-lg font-semibold text-sm transition-colors flex items-center gap-2"
-              >
-                <Calendar className="w-4 h-4" />
-                Schedule Call
-              </motion.a>
+            <div className="flex items-center gap-6">
+              <nav className="hidden lg:flex items-center gap-6 text-sm">
+                <a href="/insurance" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Insurance
+                </a>
+                <a href="/healthcare" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Healthcare
+                </a>
+                <a href="/legal" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Legal
+                </a>
+                <a href="/enterprise" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Enterprise
+                </a>
+                <a href="/docs" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Docs
+                </a>
+              </nav>
+              <div className="flex items-center gap-4">
+                <motion.span
+                  className="hidden md:block px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-xs font-semibold text-emerald-300"
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  Production-Ready Now
+                </motion.span>
+                <motion.a
+                  href="mailto:jeremy@securamem.com?subject=Request%20Demo%20%26%20Defense%20Kit"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-4 py-2 bg-trust-blue-500 hover:bg-trust-blue-600 text-white rounded-lg font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm"
+                >
+                  <Download className="w-4 h-4" />
+                  Request Demo
+                </motion.a>
+                <motion.a
+                  href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo%20Call"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-4 py-2 border-2 border-trust-teal-400 text-trust-teal-400 hover:bg-trust-teal-50 rounded-lg font-semibold text-sm transition-colors flex items-center gap-2"
+                >
+                  <Calendar className="w-4 h-4" />
+                  Schedule Call
+                </motion.a>
+              </div>
             </div>
           </div>
         </motion.header>
@@ -258,11 +277,26 @@ export default function SecuraMemLanding() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9, duration: 0.8 }}
-              className="text-slate-400 text-sm flex items-center justify-center gap-2"
+              className="text-slate-400 text-sm flex items-center justify-center gap-2 mb-4"
             >
               <CheckCircle className="w-4 h-4" />
               60-day pilot: 3 machine licenses • Proof of value guaranteed • Additional licenses available
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.1, duration: 0.8 }}
+              className="flex items-center justify-center"
+            >
+              <a
+                href="/docs"
+                className="text-sm text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-2 underline decoration-dotted underline-offset-4"
+              >
+                <FileText className="w-4 h-4" />
+                View Partner Pitch Deck
+              </a>
+            </motion.div>
           </motion.div>
           </div>
         </section>
