@@ -15,7 +15,7 @@ export default function HealthcarePage() {
             <h1 className="text-2xl font-bold text-white">SecuraMem</h1>
           </Link>
           <Link
-            href="mailto:jeremy@securamem.com?subject=Healthcare%20AI%20Pilot%20-%20%2450K"
+            href="mailto:jeremy@securamem.com?subject=Healthcare%20AI%20Pilot%20-%20%2415K"
             className="px-6 py-2 bg-trust-blue-500 hover:bg-trust-blue-600 text-white rounded-lg font-semibold text-sm transition-colors"
           >
             Start Pilot — $15K
@@ -429,7 +429,7 @@ export default function HealthcarePage() {
               Deploy SecuraMem in your radiology, pharmacy, or clinical documentation workflows. We&apos;ll prove measurable time savings and risk reduction or refund 100%.
             </p>
             <a
-              href="mailto:jeremy@securamem.com?subject=Healthcare%20AI%20Pilot%20-%20%2450K"
+              href="mailto:jeremy@securamem.com?subject=Healthcare%20AI%20Pilot%20-%20%2415K"
               className="inline-flex items-center gap-2 px-10 py-5 bg-white text-trust-blue-600 hover:bg-slate-50 rounded-xl font-bold text-xl shadow-2xl transition-all"
             >
               Contact Jeremy Brown

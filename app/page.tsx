@@ -272,7 +272,7 @@ export default function SecuraMemLanding() {
               className="flex items-center justify-center gap-6 mb-12 flex-wrap"
             >
               <motion.a
-                href="mailto:jeremy@securamem.com?subject=Start%2060-Day%20Pilot%20Program%20-%20%2450K"
+                href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)"
@@ -280,7 +280,7 @@ export default function SecuraMemLanding() {
                 whileTap={{ scale: 0.95 }}
                 className="px-10 py-5 bg-gradient-to-r from-cyan-600 to-cyan-500 rounded-xl font-bold text-lg flex items-center gap-3 shadow-2xl shadow-cyan-600/30"
               >
-                Start 60-Day Pilot — $15K
+                Start 30-Day Pilot — $15K
                 <motion.div
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -505,24 +505,6 @@ export default function SecuraMemLanding() {
                 <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">
                   {layer.title}
                 </h3>
-                <p className="text-slate-700 mb-4 leading-relaxed text-xs">
-                  {layer.description}
-                </p>
-
-                <div className="space-y-1.5">
-                  {layer.features.map((feature, featureIdx) => (
-                    <motion.div
-                      key={featureIdx}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: featureIdx * 0.1 }}
-                      className="flex items-start gap-2 text-xs text-slate-700"
-                    >
-                      <CheckCircle className="w-3 h-3 text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <span>{feature}</span>
-                    </motion.div>
-                  ))}
-                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -835,7 +817,7 @@ export default function SecuraMemLanding() {
               className="text-center mb-16"
             >
               <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-6">
-                Why Regulated Industries Choose <span className="text-cyan-400">60-Day SecuraMem Pilots</span>
+                Why Regulated Industries Choose <span className="text-cyan-400">30-Day SecuraMem Pilots</span>
               </motion.h2>
               <motion.p variants={fadeInUp} className="text-2xl text-slate-700 max-w-4xl mx-auto">
                 Prove AI compliance value in production without cloud dependency or vendor lock-in.
@@ -960,13 +942,13 @@ export default function SecuraMemLanding() {
                 Join insurance providers, healthcare systems, law firms, and enterprises proving AI compliance in production—<span className="text-cyan-400">risk-free for 30 days</span>.
               </p>
               <motion.a
-                href="mailto:jeremy@securamem.com?subject=Start%2060-Day%20Pilot%20Program%20-%20%2450K"
+                href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
                 className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-xl shadow-2xl"
                 whileHover={{ scale: 1.05, boxShadow: "0 25px 70px rgba(6, 182, 212, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Calendar className="w-6 h-6" />
-                Start Your 60-Day Pilot
+                Start Your 30-Day Pilot
               </motion.a>
             </motion.div>
           </div>
@@ -1289,7 +1271,7 @@ export default function SecuraMemLanding() {
                 <Award className="w-full h-full text-cyan-400" />
               </motion.div>
 
-              <h2 className="text-5xl font-bold mb-6 text-slate-900">Start Your 60-Day Pilot Today</h2>
+              <h2 className="text-5xl font-bold mb-6 text-slate-900">Start Your 30-Day Pilot Today</h2>
               <p className="text-2xl text-slate-700 mb-12 max-w-3xl mx-auto leading-relaxed">
                 Join <span className="text-emerald-600 font-semibold">insurance providers, healthcare systems, law firms, and enterprises</span> proving AI compliance in production with <span className="text-cyan-600 font-semibold">court-admissible audit trails</span>.
                 <strong className="block mt-4 text-cyan-600">$15K for 30 days • 3 machine licenses included • Additional licenses available</strong>
@@ -1297,7 +1279,7 @@ export default function SecuraMemLanding() {
 
               <div className="flex justify-center gap-6 mb-12 flex-wrap">
                 <motion.a
-                  href="mailto:jeremy@securamem.com?subject=Start%2060-Day%20Pilot%20Program%20-%20%2450K"
+                  href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
                   whileHover={{
                     scale: 1.05,
                     boxShadow: "0 20px 60px rgba(16, 185, 129, 0.4)"
@@ -1306,7 +1288,7 @@ export default function SecuraMemLanding() {
                   className="px-10 py-5 bg-emerald-500 text-white hover:bg-emerald-600 rounded-xl font-bold text-xl flex items-center gap-3 shadow-2xl"
                 >
                   <Rocket className="w-6 h-6" />
-                  Start 60-Day Pilot — $15K
+                  Start 30-Day Pilot — $15K
                 </motion.a>
                 <motion.a
                   href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo"
