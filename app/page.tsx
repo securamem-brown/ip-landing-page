@@ -239,10 +239,36 @@ export default function SecuraMemLanding() {
               SecuraMem is the <span className="text-cyan-400 font-semibold">AI Black Box Recorder</span> that provides <span className="text-emerald-400 font-semibold">court-admissible cryptographic proof</span> of every AI decision. Our <span className="text-purple-400 font-semibold">NeuroWall semantic firewall</span> blocks 90-100% of jailbreak attempts <span className="text-cyan-400 font-semibold">before they reach your LLM</span>. Deploy in minutes with a <span className="text-emerald-400 font-semibold">100MB single binary—no cloud, no dependencies, no risk</span>.
             </motion.p>
 
+            {/* Demo Video */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="mb-12 max-w-4xl mx-auto"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
+                <div className="aspect-video">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/8RjfMskvC_4"
+                    title="SecuraMem Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </div>
+              <p className="text-center text-slate-400 text-sm mt-4">
+                Watch SecuraMem in action: cryptographic audit trails and jailbreak prevention
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
               className="flex items-center justify-center gap-6 mb-12 flex-wrap"
             >
               <motion.a
@@ -276,7 +302,7 @@ export default function SecuraMemLanding() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.9, duration: 0.8 }}
+              transition={{ delay: 1.0, duration: 0.8 }}
               className="text-slate-400 text-sm flex items-center justify-center gap-2 mb-4"
             >
               <CheckCircle className="w-4 h-4" />
@@ -286,7 +312,7 @@ export default function SecuraMemLanding() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.1, duration: 0.8 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
               className="flex items-center justify-center"
             >
               <a
