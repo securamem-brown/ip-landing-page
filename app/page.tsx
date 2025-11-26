@@ -82,7 +82,7 @@ export default function SecuraMemLanding() {
     insurance: {
       title: "AI Liability Insurers",
       subtitle: "Lloyd's, AIG, Chubb, Coalition, At-Bay",
-      tagline: "60-day pilot proves ROI: Reduce AI liability claims exposure and price policies with data-backed risk models.",
+      tagline: "30-day pilot proves ROI: Reduce AI liability claims exposure and price policies with data-backed risk models.",
       icon: Shield,
       benefits: [
         "Cryptographic proof of AI decisions for claims investigation (court-admissible evidence)",
@@ -94,7 +94,7 @@ export default function SecuraMemLanding() {
     healthtech: {
       title: "HealthTech & Medical AI",
       subtitle: "Epic, Tempus, PathAI, Paige.AI, Butterfly",
-      tagline: "60-day pilot delivers: HIPAA-compliant audit trail, FDA-ready documentation, and malpractice risk reduction.",
+      tagline: "30-day pilot delivers: HIPAA-compliant audit trail, FDA-ready documentation, and malpractice risk reduction.",
       icon: Activity,
       benefits: [
         "HIPAA §164.312(b) compliant out-of-the-box: immutable audit controls, tamper detection",
@@ -106,7 +106,7 @@ export default function SecuraMemLanding() {
     legaltech: {
       title: "LegalTech & eDiscovery",
       subtitle: "Relativity, Everlaw, Casetext, Harvey, Disco",
-      tagline: "60-day pilot outcome: Bar-compliant AI work product, sanctions-proof eDiscovery, and malpractice protection.",
+      tagline: "30-day pilot outcome: Bar-compliant AI work product, sanctions-proof eDiscovery, and malpractice protection.",
       icon: Gavel,
       benefits: [
         "Federal Rules of Evidence 902(13): Ed25519 signatures create self-authenticating records",
@@ -280,7 +280,7 @@ export default function SecuraMemLanding() {
                 whileTap={{ scale: 0.95 }}
                 className="px-10 py-5 bg-gradient-to-r from-cyan-600 to-cyan-500 rounded-xl font-bold text-lg flex items-center gap-3 shadow-2xl shadow-cyan-600/30"
               >
-                Start 60-Day Pilot — $50K
+                Start 60-Day Pilot — $15K
                 <motion.div
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -306,7 +306,7 @@ export default function SecuraMemLanding() {
               className="text-slate-400 text-sm flex items-center justify-center gap-2 mb-4"
             >
               <CheckCircle className="w-4 h-4" />
-              60-day pilot: 3 machine licenses • Proof of value guaranteed • Additional licenses available
+              30-day pilot: 3 machine licenses • Proof of value guaranteed • Additional licenses available
             </motion.p>
 
             <motion.div
@@ -927,10 +927,10 @@ export default function SecuraMemLanding() {
                 <h3 className="text-3xl font-bold">Pilot Program Pricing</h3>
               </div>
               <div className="text-6xl md:text-7xl font-bold text-cyan-400 mb-4">
-                $50K
+                $15K
               </div>
               <p className="text-xl text-slate-700 max-w-3xl mx-auto mb-6">
-                60-day pilot includes 3 machine licenses, full deployment support, and integration guidance
+                30-day pilot includes 3 machine licenses, full deployment support, and integration guidance
               </p>
               <div className="flex flex-col gap-2 text-sm text-slate-600 max-w-2xl mx-auto">
                 <div className="flex items-center gap-2 justify-center">
@@ -957,7 +957,7 @@ export default function SecuraMemLanding() {
             >
               <Users className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
               <p className="text-2xl font-semibold text-slate-800 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Join insurance providers, healthcare systems, law firms, and enterprises proving AI compliance in production—<span className="text-cyan-400">risk-free for 60 days</span>.
+                Join insurance providers, healthcare systems, law firms, and enterprises proving AI compliance in production—<span className="text-cyan-400">risk-free for 30 days</span>.
               </p>
               <motion.a
                 href="mailto:jeremy@securamem.com?subject=Start%2060-Day%20Pilot%20Program%20-%20%2450K"
@@ -1292,7 +1292,7 @@ export default function SecuraMemLanding() {
               <h2 className="text-5xl font-bold mb-6 text-slate-900">Start Your 60-Day Pilot Today</h2>
               <p className="text-2xl text-slate-700 mb-12 max-w-3xl mx-auto leading-relaxed">
                 Join <span className="text-emerald-600 font-semibold">insurance providers, healthcare systems, law firms, and enterprises</span> proving AI compliance in production with <span className="text-cyan-600 font-semibold">court-admissible audit trails</span>.
-                <strong className="block mt-4 text-cyan-600">$50K for 60 days • 3 machine licenses included • Additional licenses available</strong>
+                <strong className="block mt-4 text-cyan-600">$15K for 30 days • 3 machine licenses included • Additional licenses available</strong>
               </p>
 
               <div className="flex justify-center gap-6 mb-12 flex-wrap">
@@ -1306,7 +1306,7 @@ export default function SecuraMemLanding() {
                   className="px-10 py-5 bg-emerald-500 text-white hover:bg-emerald-600 rounded-xl font-bold text-xl flex items-center gap-3 shadow-2xl"
                 >
                   <Rocket className="w-6 h-6" />
-                  Start 60-Day Pilot — $50K
+                  Start 60-Day Pilot — $15K
                 </motion.a>
                 <motion.a
                   href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo"
@@ -1322,8 +1322,8 @@ export default function SecuraMemLanding() {
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {[
                   { value: "15 min", label: "Deployment Time", color: "text-emerald-600" },
-                  { value: "60 days", label: "Pilot Duration", color: "text-cyan-600" },
-                  { value: "$50K", label: "Pilot Pricing", color: "text-purple-600" }
+                  { value: "30 days", label: "Pilot Duration", color: "text-cyan-600" },
+                  { value: "$15K", label: "Pilot Pricing", color: "text-purple-600" }
                 ].map((stat, idx) => (
                   <motion.div
                     key={idx}

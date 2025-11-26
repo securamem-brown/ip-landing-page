@@ -18,7 +18,7 @@ export default function HealthcarePage() {
             href="mailto:jeremy@securamem.com?subject=Healthcare%20AI%20Pilot%20-%20%2450K"
             className="px-6 py-2 bg-trust-blue-500 hover:bg-trust-blue-600 text-white rounded-lg font-semibold text-sm transition-colors"
           >
-            Start Pilot — $50K
+            Start Pilot — $15K
           </Link>
         </nav>
       </header>
@@ -70,7 +70,7 @@ export default function HealthcarePage() {
                 <span className="text-red-500">✗</span> HIPAA Violations
               </h3>
               <p className="text-slate-700">
-                Sending PHI to OpenAI, Anthropic, or other cloud vendors creates Business Associate liability and potential $50K+ per-record fines if breached.
+                Sending PHI to OpenAI, Anthropic, or other cloud vendors creates Business Associate liability and potential $15K+ per-record fines if breached.
               </p>
             </div>
 
@@ -420,10 +420,10 @@ export default function HealthcarePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Start Your 60-Day Clinical Pilot
+              Start Your 30-Day Clinical Pilot
             </h2>
             <p className="text-xl text-white/90 mb-4">
-              $50,000 • 3 machine licenses • Proof of value guaranteed
+              $15,000 • 3 machine licenses • Proof of value guaranteed
             </p>
             <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
               Deploy SecuraMem in your radiology, pharmacy, or clinical documentation workflows. We&apos;ll prove measurable time savings and risk reduction or refund 100%.

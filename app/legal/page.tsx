@@ -18,7 +18,7 @@ export default function LegalPage() {
             href="mailto:jeremy@securamem.com?subject=Legal%20AI%20Pilot%20-%20%2450K"
             className="px-6 py-2 bg-trust-blue-500 hover:bg-trust-blue-600 text-white rounded-lg font-semibold text-sm transition-colors"
           >
-            Start Pilot — $50K
+            Start Pilot — $15K
           </Link>
         </nav>
       </header>
@@ -420,10 +420,10 @@ export default function LegalPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Start Your 60-Day Legal Pilot
+              Start Your 30-Day Legal Pilot
             </h2>
             <p className="text-xl text-white/90 mb-4">
-              $50,000 • 3 machine licenses • Proof of value guaranteed
+              $15,000 • 3 machine licenses • Proof of value guaranteed
             </p>
             <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
               Deploy SecuraMem in your contract review, legal research, or eDiscovery workflows. We&apos;ll prove measurable time savings and risk reduction or refund 100%.
