@@ -197,42 +197,9 @@ export default function SecuraMemLanding() {
                   </motion.a>
                 </div>
               </div>
-<<<<<<< HEAD
 
               {/* Mobile Menu Button & CTA */}
               <div className="flex lg:hidden items-center gap-2">
-=======
-            </motion.div>
-            <div className="flex items-center gap-6">
-              <nav className="hidden lg:flex items-center gap-6 text-sm">
-                <a href="/partners" className="text-trust-teal-300 hover:text-trust-teal-200 transition-colors font-bold">
-                  Partners
-                </a>
-                <a href="/insurance" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Insurance
-                </a>
-                <a href="/healthcare" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Healthcare
-                </a>
-                <a href="/legal" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Legal
-                </a>
-                <a href="/enterprise" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Enterprise
-                </a>
-                <a href="/docs" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Docs
-                </a>
-              </nav>
-              <div className="flex items-center gap-4">
-                <motion.span
-                  className="hidden md:block px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-xs font-semibold text-emerald-300"
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  Production-Ready Now
-                </motion.span>
->>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
                 <motion.a
                   href="mailto:jeremy@securamem.com?subject=Request%20Demo"
                   whileTap={{ scale: 0.95 }}
