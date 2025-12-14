@@ -284,15 +284,9 @@ export default function SecuraMemLanding() {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight text-white"
               >
-<<<<<<< HEAD
                 When Your AI Makes a Mistake,
                 <br className="hidden sm:block" />
                 <span className="text-trust-teal-300">Can You Prove What Happened?</span>
-=======
-                AI Audit Infrastructure—
-                <br />
-                <span className="text-trust-teal-300">Embeddable, Licensable, Air-Gap Ready</span>
->>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
               </motion.h1>
 
               <motion.p
@@ -337,7 +331,7 @@ export default function SecuraMemLanding() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 px-4"
             >
               <motion.a
-                href="/partners"
+                href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)"
@@ -345,11 +339,7 @@ export default function SecuraMemLanding() {
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-600 to-cyan-500 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 shadow-2xl shadow-cyan-600/30"
               >
-<<<<<<< HEAD
                 <span className="whitespace-nowrap">Start 30-Day Pilot — $15K</span>
-=======
-                Partner Program
->>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
                 <motion.div
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -358,26 +348,13 @@ export default function SecuraMemLanding() {
                 </motion.div>
               </motion.a>
               <motion.a
-                href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
-                whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.8)" }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 border-2 border-slate-400 text-white rounded-xl font-bold text-lg flex items-center gap-3 backdrop-blur-sm hover:bg-white/10"
-              >
-                Request Demo
-              </motion.a>
-              <motion.a
                 href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo"
                 whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.8)" }}
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 border-2 border-slate-400 text-white rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 backdrop-blur-sm hover:bg-white/10"
               >
-<<<<<<< HEAD
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span className="whitespace-nowrap">Schedule Live Demo</span>
-=======
-                <Calendar className="w-5 h-5" />
-                Schedule Call
->>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
               </motion.a>
             </motion.div>
 
@@ -1382,7 +1359,6 @@ export default function SecuraMemLanding() {
                   whileTap={{ scale: 0.95 }}
                   className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-emerald-500 text-white hover:bg-emerald-600 rounded-xl font-bold text-base sm:text-lg md:text-xl flex items-center justify-center gap-2 sm:gap-3 shadow-2xl"
                 >
-<<<<<<< HEAD
                   <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span className="whitespace-nowrap">Start 30-Day Pilot — $15K</span>
                 </motion.a>
@@ -1394,10 +1370,6 @@ export default function SecuraMemLanding() {
                 >
                   <Calendar className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span className="whitespace-nowrap">Schedule Live Demo</span>
-=======
-                  <Rocket className="w-6 h-6" />
-                  Enterprise Pilot — $15K
->>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
                 </motion.a>
               </div>
 
