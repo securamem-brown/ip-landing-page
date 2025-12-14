@@ -197,9 +197,42 @@ export default function SecuraMemLanding() {
                   </motion.a>
                 </div>
               </div>
+<<<<<<< HEAD
 
               {/* Mobile Menu Button & CTA */}
               <div className="flex lg:hidden items-center gap-2">
+=======
+            </motion.div>
+            <div className="flex items-center gap-6">
+              <nav className="hidden lg:flex items-center gap-6 text-sm">
+                <a href="/partners" className="text-trust-teal-300 hover:text-trust-teal-200 transition-colors font-bold">
+                  Partners
+                </a>
+                <a href="/insurance" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Insurance
+                </a>
+                <a href="/healthcare" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Healthcare
+                </a>
+                <a href="/legal" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Legal
+                </a>
+                <a href="/enterprise" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Enterprise
+                </a>
+                <a href="/docs" className="text-slate-300 hover:text-white transition-colors font-medium">
+                  Docs
+                </a>
+              </nav>
+              <div className="flex items-center gap-4">
+                <motion.span
+                  className="hidden md:block px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-xs font-semibold text-emerald-300"
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  Production-Ready Now
+                </motion.span>
+>>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
                 <motion.a
                   href="mailto:jeremy@securamem.com?subject=Request%20Demo"
                   whileTap={{ scale: 0.95 }}
@@ -284,9 +317,15 @@ export default function SecuraMemLanding() {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight text-white"
               >
+<<<<<<< HEAD
                 When Your AI Makes a Mistake,
                 <br className="hidden sm:block" />
                 <span className="text-trust-teal-300">Can You Prove What Happened?</span>
+=======
+                AI Audit Infrastructure—
+                <br />
+                <span className="text-trust-teal-300">Embeddable, Licensable, Air-Gap Ready</span>
+>>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
               </motion.h1>
 
               <motion.p
@@ -295,7 +334,7 @@ export default function SecuraMemLanding() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 mb-8 sm:mb-12 leading-relaxed max-w-4xl mx-auto px-2"
             >
-              SecuraMem is the <span className="text-cyan-400 font-semibold">AI Black Box Recorder</span> that provides <span className="text-emerald-400 font-semibold">court-admissible cryptographic proof</span> of every AI decision. Our <span className="text-purple-400 font-semibold">NeuroWall semantic firewall</span> blocks 90-100% of jailbreak attempts <span className="text-cyan-400 font-semibold">before they reach your LLM</span>. Deploy in minutes with a <span className="text-emerald-400 font-semibold">100MB single binary—no cloud, no dependencies, no risk</span>.
+              Cryptographic chain-of-custody for AI systems. <span className="text-cyan-400 font-semibold">Single Rust binary. Zero dependencies. White-label ready.</span> System integrators license SecuraMem to embed <span className="text-emerald-400 font-semibold">court-admissible audit trails</span> in their platforms. Enterprises deploy directly for <span className="text-purple-400 font-semibold">air-gapped, compliant AI</span>.
             </motion.p>
 
             {/* Demo Video */}
@@ -331,7 +370,7 @@ export default function SecuraMemLanding() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 px-4"
             >
               <motion.a
-                href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
+                href="/partners"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)"
@@ -339,7 +378,11 @@ export default function SecuraMemLanding() {
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-600 to-cyan-500 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 shadow-2xl shadow-cyan-600/30"
               >
+<<<<<<< HEAD
                 <span className="whitespace-nowrap">Start 30-Day Pilot — $15K</span>
+=======
+                Partner Program
+>>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
                 <motion.div
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -348,13 +391,26 @@ export default function SecuraMemLanding() {
                 </motion.div>
               </motion.a>
               <motion.a
+                href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
+                whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.8)" }}
+                whileTap={{ scale: 0.95 }}
+                className="px-10 py-5 border-2 border-slate-400 text-white rounded-xl font-bold text-lg flex items-center gap-3 backdrop-blur-sm hover:bg-white/10"
+              >
+                Request Demo
+              </motion.a>
+              <motion.a
                 href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo"
                 whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.8)" }}
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 border-2 border-slate-400 text-white rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 backdrop-blur-sm hover:bg-white/10"
               >
+<<<<<<< HEAD
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span className="whitespace-nowrap">Schedule Live Demo</span>
+=======
+                <Calendar className="w-5 h-5" />
+                Schedule Call
+>>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
               </motion.a>
             </motion.div>
 
@@ -365,7 +421,7 @@ export default function SecuraMemLanding() {
               className="text-slate-400 text-sm flex items-center justify-center gap-2 mb-4"
             >
               <CheckCircle className="w-4 h-4" />
-              30-day pilot: 3 machine licenses • Proof of value guaranteed • Additional licenses available
+              For Partners: Source licensing from $35K/year • For Enterprises: $15K 30-day pilot
             </motion.p>
 
             <motion.div
@@ -1330,13 +1386,26 @@ export default function SecuraMemLanding() {
                 <Award className="w-full h-full text-cyan-400" />
               </motion.div>
 
-              <h2 className="text-5xl font-bold mb-6 text-slate-900">Start Your 30-Day Pilot Today</h2>
+              <h2 className="text-5xl font-bold mb-6 text-slate-900">Get Started Today</h2>
               <p className="text-2xl text-slate-700 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Join <span className="text-emerald-600 font-semibold">insurance providers, healthcare systems, law firms, and enterprises</span> proving AI compliance in production with <span className="text-cyan-600 font-semibold">court-admissible audit trails</span>.
-                <strong className="block mt-4 text-cyan-600">$15K for 30 days • 3 machine licenses included • Additional licenses available</strong>
+                <span className="text-cyan-600 font-semibold">System Integrators:</span> License our cryptographic audit infrastructure. <span className="text-emerald-600 font-semibold">Source License from $35K/year.</span>
+                <br />
+                <span className="text-purple-600 font-semibold">Enterprises:</span> Deploy directly with our 30-day pilot program. <span className="text-emerald-600 font-semibold">$15K for 3 machine licenses.</span>
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
+                <motion.a
+                  href="/partners"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 20px 60px rgba(6, 182, 212, 0.4)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-10 py-5 bg-gradient-to-r from-cyan-600 to-emerald-500 text-white rounded-xl font-bold text-xl flex items-center gap-3 shadow-2xl"
+                >
+                  <Layers className="w-6 h-6" />
+                  Partner Program
+                </motion.a>
                 <motion.a
                   href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
                   whileHover={{
@@ -1346,6 +1415,7 @@ export default function SecuraMemLanding() {
                   whileTap={{ scale: 0.95 }}
                   className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-emerald-500 text-white hover:bg-emerald-600 rounded-xl font-bold text-base sm:text-lg md:text-xl flex items-center justify-center gap-2 sm:gap-3 shadow-2xl"
                 >
+<<<<<<< HEAD
                   <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span className="whitespace-nowrap">Start 30-Day Pilot — $15K</span>
                 </motion.a>
@@ -1357,6 +1427,10 @@ export default function SecuraMemLanding() {
                 >
                   <Calendar className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span className="whitespace-nowrap">Schedule Live Demo</span>
+=======
+                  <Rocket className="w-6 h-6" />
+                  Enterprise Pilot — $15K
+>>>>>>> dc61285cf53b35d679488fa6bd1d5daa22cec348
                 </motion.a>
               </div>
 
@@ -1414,30 +1488,30 @@ export default function SecuraMemLanding() {
               </div>
               {[
                 {
-                  title: "Get Started",
+                  title: "Partners",
                   links: [
-                    { text: "Schedule Live Demo", href: "mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo" },
-                    { text: "Pricing & Licensing", href: "mailto:jeremy@securamem.com?subject=Pricing%20%26%20Licensing%20Inquiry" },
-                    { text: "Pilot Deployment", href: "mailto:jeremy@securamem.com?subject=Pilot%20Deployment%20Request" },
-                    { text: "Defense Kit Download", href: "mailto:jeremy@securamem.com?subject=Defense%20Kit%20%26%20Technical%20Docs" }
+                    { text: "Partner Program", href: "/partners" },
+                    { text: "Source Licensing", href: "mailto:jeremy@securamem.com?subject=Source%20Licensing%20Inquiry" },
+                    { text: "Evaluation License", href: "mailto:jeremy@securamem.com?subject=Evaluation%20License%20Request%20-%20%245K" },
+                    { text: "Integration Guide", href: "/docs" }
                   ]
                 },
                 {
-                  title: "Platform",
+                  title: "Enterprise",
                   links: [
-                    { text: "Rust Architecture", href: "mailto:jeremy@securamem.com?subject=Rust%20Architecture%20Information" },
-                    { text: "NeuroWall Firewall", href: "mailto:jeremy@securamem.com?subject=NeuroWall%20Semantic%20Firewall" },
-                    { text: "Compliance", href: "mailto:jeremy@securamem.com?subject=Compliance%20Information" },
-                    { text: "Integration Specs", href: "mailto:jeremy@securamem.com?subject=Integration%20Specifications" }
+                    { text: "30-Day Pilot", href: "mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K" },
+                    { text: "Schedule Demo", href: "mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo" },
+                    { text: "Pricing", href: "mailto:jeremy@securamem.com?subject=Pricing%20%26%20Licensing%20Inquiry" },
+                    { text: "Technical Docs", href: "/docs" }
                   ]
                 },
                 {
-                  title: "Contact Sales",
+                  title: "Resources",
                   links: [
-                    { text: "jeremy@securamem.com", href: "mailto:jeremy@securamem.com" },
-                    { text: "Sales Inquiries", href: "mailto:jeremy@securamem.com?subject=Sales%20Inquiry" },
-                    { text: "Technical Questions", href: "mailto:jeremy@securamem.com?subject=Technical%20Question" },
-                    { text: "NDA Request", href: "mailto:jeremy@securamem.com?subject=NDA%20Request" }
+                    { text: "Documentation", href: "/docs" },
+                    { text: "Healthcare Use Cases", href: "/healthcare" },
+                    { text: "Legal Use Cases", href: "/legal" },
+                    { text: "Insurance Use Cases", href: "/insurance" }
                   ]
                 }
               ].map((column, idx) => (
