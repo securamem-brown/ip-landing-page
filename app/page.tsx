@@ -7,7 +7,8 @@ import {
   Shield, Lock, CheckCircle, ArrowRight, Download, Calendar,
   Code, Globe, Zap, FileText, AlertTriangle,
   Award, Rocket, Layers, Terminal, Database, Activity,
-  Eye, Scale, Building2, Gavel, Brain, TrendingUp, Target, Users
+  Eye, Scale, Building2, Gavel, Brain, TrendingUp, Target, Users,
+  Menu, X
 } from 'lucide-react';
 
 // Animation variants
@@ -64,6 +65,7 @@ const AnimatedSection = ({ children, className = '' }: { children: React.ReactNo
 
 export default function SecuraMemLanding() {
   const [activeTab, setActiveTab] = useState('insurance');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const scaleProgress = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -134,70 +136,127 @@ export default function SecuraMemLanding() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-trust-navy-900 border-b border-trust-navy-800/50 sticky top-0 z-40 shadow-sm"
         >
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <motion.div
-              className="flex items-center gap-3"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              <Shield className="w-8 h-8 text-trust-teal-400" />
-              <div>
-                <h1 className="text-2xl font-bold text-white">SecuraMem</h1>
-                <p className="text-xs text-trust-navy-300">The AI Flight Recorder™</p>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+            <div className="flex items-center justify-between">
+              <motion.div
+                className="flex items-center gap-2 sm:gap-3"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-trust-teal-400" />
+                <div>
+                  <h1 className="text-lg sm:text-2xl font-bold text-white">SecuraMem</h1>
+                  <p className="text-xs text-trust-navy-300 hidden sm:block">The AI Flight Recorder™</p>
+                </div>
+              </motion.div>
+
+              {/* Desktop Navigation */}
+              <div className="hidden lg:flex items-center gap-6">
+                <nav className="flex items-center gap-6 text-sm">
+                  <a href="/insurance" className="text-slate-300 hover:text-white transition-colors font-medium">
+                    Insurance
+                  </a>
+                  <a href="/healthcare" className="text-slate-300 hover:text-white transition-colors font-medium">
+                    Healthcare
+                  </a>
+                  <a href="/legal" className="text-slate-300 hover:text-white transition-colors font-medium">
+                    Legal
+                  </a>
+                  <a href="/enterprise" className="text-slate-300 hover:text-white transition-colors font-medium">
+                    Enterprise
+                  </a>
+                  <a href="/docs" className="text-slate-300 hover:text-white transition-colors font-medium">
+                    Docs
+                  </a>
+                </nav>
+                <div className="flex items-center gap-4">
+                  <motion.span
+                    className="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-xs font-semibold text-emerald-300"
+                    animate={{ scale: [1, 1.05, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    Production-Ready Now
+                  </motion.span>
+                  <motion.a
+                    href="mailto:jeremy@securamem.com?subject=Request%20Demo%20%26%20Defense%20Kit"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-4 py-2 bg-trust-blue-500 hover:bg-trust-blue-600 text-white rounded-lg font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm"
+                  >
+                    <Download className="w-4 h-4" />
+                    Demo
+                  </motion.a>
+                  <motion.a
+                    href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo%20Call"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-4 py-2 border-2 border-trust-teal-400 text-trust-teal-400 hover:bg-trust-teal-50 rounded-lg font-semibold text-sm transition-colors flex items-center gap-2"
+                  >
+                    <Calendar className="w-4 h-4" />
+                    Call
+                  </motion.a>
+                </div>
               </div>
-            </motion.div>
-            <div className="flex items-center gap-6">
-              <nav className="hidden lg:flex items-center gap-6 text-sm">
-                <a href="/insurance" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Insurance
-                </a>
-                <a href="/healthcare" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Healthcare
-                </a>
-                <a href="/legal" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Legal
-                </a>
-                <a href="/enterprise" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Enterprise
-                </a>
-                <a href="/docs" className="text-slate-300 hover:text-white transition-colors font-medium">
-                  Docs
-                </a>
-              </nav>
-              <div className="flex items-center gap-4">
-                <motion.span
-                  className="hidden md:block px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-xs font-semibold text-emerald-300"
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  Production-Ready Now
-                </motion.span>
+
+              {/* Mobile Menu Button & CTA */}
+              <div className="flex lg:hidden items-center gap-2">
                 <motion.a
-                  href="mailto:jeremy@securamem.com?subject=Request%20Demo%20%26%20Defense%20Kit"
-                  whileHover={{ scale: 1.05 }}
+                  href="mailto:jeremy@securamem.com?subject=Request%20Demo"
                   whileTap={{ scale: 0.95 }}
-                  className="px-4 py-2 bg-trust-blue-500 hover:bg-trust-blue-600 text-white rounded-lg font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm"
+                  className="px-3 py-1.5 bg-trust-blue-500 text-white rounded-lg font-semibold text-xs flex items-center gap-1"
                 >
-                  <Download className="w-4 h-4" />
-                  Request Demo
+                  <Download className="w-3 h-3" />
+                  Demo
                 </motion.a>
-                <motion.a
-                  href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo%20Call"
-                  whileHover={{ scale: 1.05 }}
+                <motion.button
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   whileTap={{ scale: 0.95 }}
-                  className="px-4 py-2 border-2 border-trust-teal-400 text-trust-teal-400 hover:bg-trust-teal-50 rounded-lg font-semibold text-sm transition-colors flex items-center gap-2"
+                  className="p-2 text-white"
                 >
-                  <Calendar className="w-4 h-4" />
-                  Schedule Call
-                </motion.a>
+                  {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </motion.button>
               </div>
             </div>
+
+            {/* Mobile Menu */}
+            {mobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="lg:hidden mt-4 pb-4 border-t border-trust-navy-800/50 pt-4"
+              >
+                <nav className="flex flex-col gap-3">
+                  <a href="/insurance" className="text-slate-300 hover:text-white transition-colors font-medium py-2">
+                    Insurance
+                  </a>
+                  <a href="/healthcare" className="text-slate-300 hover:text-white transition-colors font-medium py-2">
+                    Healthcare
+                  </a>
+                  <a href="/legal" className="text-slate-300 hover:text-white transition-colors font-medium py-2">
+                    Legal
+                  </a>
+                  <a href="/enterprise" className="text-slate-300 hover:text-white transition-colors font-medium py-2">
+                    Enterprise
+                  </a>
+                  <a href="/docs" className="text-slate-300 hover:text-white transition-colors font-medium py-2">
+                    Docs
+                  </a>
+                  <a
+                    href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo%20Call"
+                    className="mt-2 px-4 py-2 border-2 border-trust-teal-400 text-trust-teal-400 rounded-lg font-semibold text-sm text-center"
+                  >
+                    Schedule Call
+                  </a>
+                </nav>
+              </motion.div>
+            )}
           </div>
         </motion.header>
 
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-trust-navy-900 via-trust-navy-800 to-trust-navy-900 relative">
-          <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 md:py-32">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -213,9 +272,9 @@ export default function SecuraMemLanding() {
                   damping: 20,
                   duration: 1
                 }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-trust-teal-500/10 border border-trust-teal-400/30 rounded-full text-trust-teal-300 text-sm font-semibold mb-8"
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-trust-teal-500/10 border border-trust-teal-400/30 rounded-full text-trust-teal-300 text-xs sm:text-sm font-semibold mb-6 sm:mb-8"
               >
-                <Shield className="w-4 h-4" />
+                <Shield className="w-3 h-3 sm:w-4 sm:h-4" />
                 THE AI FLIGHT RECORDER™
               </motion.div>
 
@@ -223,10 +282,10 @@ export default function SecuraMemLanding() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
-                className="text-6xl md:text-7xl font-bold mb-8 leading-tight text-white"
+                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight text-white"
               >
                 When Your AI Makes a Mistake,
-                <br />
+                <br className="hidden sm:block" />
                 <span className="text-trust-teal-300">Can You Prove What Happened?</span>
               </motion.h1>
 
@@ -234,7 +293,7 @@ export default function SecuraMemLanding() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-2xl text-slate-300 mb-12 leading-relaxed max-w-4xl mx-auto"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 mb-8 sm:mb-12 leading-relaxed max-w-4xl mx-auto px-2"
             >
               SecuraMem is the <span className="text-cyan-400 font-semibold">AI Black Box Recorder</span> that provides <span className="text-emerald-400 font-semibold">court-admissible cryptographic proof</span> of every AI decision. Our <span className="text-purple-400 font-semibold">NeuroWall semantic firewall</span> blocks 90-100% of jailbreak attempts <span className="text-cyan-400 font-semibold">before they reach your LLM</span>. Deploy in minutes with a <span className="text-emerald-400 font-semibold">100MB single binary—no cloud, no dependencies, no risk</span>.
             </motion.p>
@@ -269,7 +328,7 @@ export default function SecuraMemLanding() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className="flex items-center justify-center gap-6 mb-12 flex-wrap"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 px-4"
             >
               <motion.a
                 href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
@@ -278,24 +337,24 @@ export default function SecuraMemLanding() {
                   boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 bg-gradient-to-r from-cyan-600 to-cyan-500 rounded-xl font-bold text-lg flex items-center gap-3 shadow-2xl shadow-cyan-600/30"
+                className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-600 to-cyan-500 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 shadow-2xl shadow-cyan-600/30"
               >
-                Start 30-Day Pilot — $15K
+                <span className="whitespace-nowrap">Start 30-Day Pilot — $15K</span>
                 <motion.div
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </motion.div>
               </motion.a>
               <motion.a
                 href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo"
                 whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.8)" }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 border-2 border-slate-400 text-white rounded-xl font-bold text-lg flex items-center gap-3 backdrop-blur-sm hover:bg-white/10"
+                className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 border-2 border-slate-400 text-white rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 backdrop-blur-sm hover:bg-white/10"
               >
-                <Calendar className="w-5 h-5" />
-                Schedule Live Demo
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="whitespace-nowrap">Schedule Live Demo</span>
               </motion.a>
             </motion.div>
 
@@ -328,7 +387,7 @@ export default function SecuraMemLanding() {
         </section>
 
         {/* Production Metrics */}
-        <AnimatedSection className="max-w-7xl mx-auto px-6 py-20 border-y border-slate-800/50">
+        <AnimatedSection className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 border-y border-slate-800/50">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -336,10 +395,10 @@ export default function SecuraMemLanding() {
             variants={staggerContainer}
             className="text-center mb-16"
           >
-            <motion.h2 variants={fadeInUp} className="text-5xl font-bold mb-4">
+            <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Production-Ready Today
             </motion.h2>
-            <motion.p variants={fadeInUp} className="text-slate-600 text-xl">
+            <motion.p variants={fadeInUp} className="text-slate-600 text-base sm:text-lg md:text-xl">
               Deploy in 15 minutes • Full compliance out-of-the-box • Zero ongoing maintenance
             </motion.p>
           </motion.div>
@@ -349,7 +408,7 @@ export default function SecuraMemLanding() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-4 gap-6"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
           >
             {productionMetrics.map((metric, idx) => (
               <motion.div
@@ -383,7 +442,7 @@ export default function SecuraMemLanding() {
         </AnimatedSection>
 
         {/* Technical Architecture Deep Dive - 3 Layer System + NeuroWall */}
-        <AnimatedSection className="max-w-7xl mx-auto px-6 py-24">
+        <AnimatedSection className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 md:py-24">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -411,7 +470,7 @@ export default function SecuraMemLanding() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16"
           >
             {[
               {
@@ -662,7 +721,7 @@ export default function SecuraMemLanding() {
         </AnimatedSection>
 
         {/* Why This Matters - Stakeholder Value */}
-        <AnimatedSection className="max-w-7xl mx-auto px-6 py-24 border-y border-slate-800/50">
+        <AnimatedSection className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 md:py-24 border-y border-slate-800/50">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -683,7 +742,7 @@ export default function SecuraMemLanding() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
           >
             {[
               {
@@ -807,8 +866,8 @@ export default function SecuraMemLanding() {
         </AnimatedSection>
 
         {/* Pilot Program Value - Why Regulated Industries Choose SecuraMem */}
-        <AnimatedSection className="py-24 bg-slate-50 border-y border-slate-200">
-          <div className="max-w-6xl mx-auto px-6">
+        <AnimatedSection className="py-12 sm:py-20 md:py-24 bg-slate-50 border-y border-slate-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -824,7 +883,7 @@ export default function SecuraMemLanding() {
               </motion.p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
               {/* The Problem */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -908,10 +967,10 @@ export default function SecuraMemLanding() {
                 <Target className="w-10 h-10 text-cyan-400" />
                 <h3 className="text-3xl font-bold">Pilot Program Pricing</h3>
               </div>
-              <div className="text-6xl md:text-7xl font-bold text-cyan-400 mb-4">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-cyan-400 mb-4">
                 $15K
               </div>
-              <p className="text-xl text-slate-700 max-w-3xl mx-auto mb-6">
+              <p className="text-base sm:text-lg md:text-xl text-slate-700 max-w-3xl mx-auto mb-6 px-4">
                 30-day pilot includes 3 machine licenses, full deployment support, and integration guidance
               </p>
               <div className="flex flex-col gap-2 text-sm text-slate-600 max-w-2xl mx-auto">
@@ -1091,7 +1150,7 @@ export default function SecuraMemLanding() {
             </motion.p>
           </motion.div>
 
-          <div className="flex justify-center gap-3 mb-12 flex-wrap">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 px-4">
             {Object.keys(valueProps).map((key) => {
               const Icon = valueProps[key].icon;
               return (
@@ -1100,7 +1159,7 @@ export default function SecuraMemLanding() {
                   onClick={() => setActiveTab(key)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`px-6 py-4 rounded-xl font-semibold transition-all flex items-center gap-2 ${
+                  className={`px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all flex items-center gap-2 ${
                     activeTab === key
                       ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg shadow-blue-500/30'
                       : 'bg-white text-slate-600 hover:text-slate-900 border-2 border-slate-200 hover:border-trust-blue-300'
@@ -1244,7 +1303,7 @@ export default function SecuraMemLanding() {
         </AnimatedSection>
 
         {/* Final CTA */}
-        <AnimatedSection className="max-w-6xl mx-auto px-6 py-24">
+        <AnimatedSection className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20 md:py-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -1277,7 +1336,7 @@ export default function SecuraMemLanding() {
                 <strong className="block mt-4 text-cyan-600">$15K for 30 days • 3 machine licenses included • Additional licenses available</strong>
               </p>
 
-              <div className="flex justify-center gap-6 mb-12 flex-wrap">
+              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
                 <motion.a
                   href="mailto:jeremy@securamem.com?subject=Start%2030-Day%20Pilot%20Program%20-%20%2415K"
                   whileHover={{
@@ -1285,23 +1344,23 @@ export default function SecuraMemLanding() {
                     boxShadow: "0 20px 60px rgba(16, 185, 129, 0.4)"
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-10 py-5 bg-emerald-500 text-white hover:bg-emerald-600 rounded-xl font-bold text-xl flex items-center gap-3 shadow-2xl"
+                  className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-emerald-500 text-white hover:bg-emerald-600 rounded-xl font-bold text-base sm:text-lg md:text-xl flex items-center justify-center gap-2 sm:gap-3 shadow-2xl"
                 >
-                  <Rocket className="w-6 h-6" />
-                  Start 30-Day Pilot — $15K
+                  <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <span className="whitespace-nowrap">Start 30-Day Pilot — $15K</span>
                 </motion.a>
                 <motion.a
                   href="mailto:jeremy@securamem.com?subject=Schedule%20Live%20Demo"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-10 py-5 border-2 border-slate-300 text-slate-700 hover:bg-slate-50 rounded-xl font-bold text-xl flex items-center gap-3"
+                  className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 border-2 border-slate-300 text-slate-700 hover:bg-slate-50 rounded-xl font-bold text-base sm:text-lg md:text-xl flex items-center justify-center gap-2 sm:gap-3"
                 >
-                  <Calendar className="w-6 h-6" />
-                  Schedule Live Demo
+                  <Calendar className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <span className="whitespace-nowrap">Schedule Live Demo</span>
                 </motion.a>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
                 {[
                   { value: "15 min", label: "Deployment Time", color: "text-emerald-600" },
                   { value: "30 days", label: "Pilot Duration", color: "text-cyan-600" },
@@ -1331,9 +1390,9 @@ export default function SecuraMemLanding() {
         </AnimatedSection>
 
         {/* Footer */}
-        <footer className="border-t border-slate-800/50 glass-effect py-16">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <footer className="border-t border-slate-800/50 glass-effect py-12 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
               <div>
                 <motion.div
                   className="flex items-center gap-2 mb-4"
@@ -1397,9 +1456,9 @@ export default function SecuraMemLanding() {
                 </div>
               ))}
             </div>
-            <div className="pt-8 border-t border-slate-800/50 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-              <p>© 2025 SecuraMem (17342926 Canada Inc.). All rights reserved.</p>
-              <div className="flex gap-6">
+            <div className="pt-6 sm:pt-8 border-t border-slate-800/50 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-500">
+              <p className="text-center md:text-left">© 2025 SecuraMem (17342926 Canada Inc.). All rights reserved.</p>
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                 {["Privacy Policy", "Terms of Service", "Pilot Agreement"].map((link, idx) => (
                   <motion.a
                     key={idx}
