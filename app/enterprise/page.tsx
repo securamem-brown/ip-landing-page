@@ -15,10 +15,10 @@ export default function EnterprisePage() {
             <h1 className="text-2xl font-bold text-white">SecuraMem</h1>
           </Link>
           <Link
-            href="mailto:jeremy@securamem.com?subject=Enterprise%20AI%20Pilot%20-%20%2415K"
+            href="mailto:jeremy@securamem.com?subject=Enterprise%20AI%20Deployment%20Information"
             className="px-6 py-2 bg-trust-blue-500 hover:bg-trust-blue-600 text-white rounded-lg font-semibold text-sm transition-colors"
           >
-            Start Pilot — $15K
+            Contact Sales
           </Link>
         </nav>
       </header>
@@ -420,19 +420,19 @@ export default function EnterprisePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Start Your 30-Day Enterprise Pilot
+              Ready to Deploy SecuraMem?
             </h2>
             <p className="text-xl text-white/90 mb-4">
-              $15,000 • 3 machine licenses • Proof of value guaranteed
+              Protect your operations and intellectual property
             </p>
             <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
-              Deploy SecuraMem in your manufacturing, operations, or support workflows. We&apos;ll prove measurable efficiency gains and risk reduction or refund 100%.
+              Contact us to discuss deployment options, custom pricing, and how SecuraMem enables sovereign, auditable AI for your critical infrastructure.
             </p>
             <a
-              href="mailto:jeremy@securamem.com?subject=Enterprise%20AI%20Pilot%20-%20%2415K"
+              href="mailto:jeremy@securamem.com?subject=Enterprise%20AI%20Deployment%20Information"
               className="inline-flex items-center gap-2 px-10 py-5 bg-white text-trust-blue-600 hover:bg-slate-50 rounded-xl font-bold text-xl shadow-2xl transition-all"
             >
-              Contact Jeremy Brown
+              Contact Sales
             </a>
           </motion.div>
         </div>
